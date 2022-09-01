@@ -44,13 +44,13 @@ public class TaskController {
         if (tasks.size() > 0){
             id = String.valueOf((Integer.parseInt(tasks.get(tasks.size()-1).getId()) + 1));
          }
-        Task newTask = taskService.create(new Task(new TaskDto(taskDto.getName(), taskDto.getDescription(), taskDto.getStatus(), taskDto.getAssignedTo(), taskDto.getDueDate()), id, new Date()));
+        Task newTask = taskService.create(new Task(taskDto, id, new Date()));
         return new ResponseEntity<TaskDto>(taskService.mapToDto(newTask), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<TaskDto> update(@RequestBody TaskDto taskDto, @PathVariable String id){
-        Task updateTask = new Task(new TaskDto(taskDto.getName(), taskDto.getDescription(), taskDto.getStatus(), taskDto.getAssignedTo(), taskDto.getDueDate()), id, taskService.findById(id).getCreatedAt());
+        Task updateTask = new Task(taskDto, id, taskService.findById(id).getCreatedAt());
         return new ResponseEntity<TaskDto>(taskService.mapToDto(taskService.update(updateTask, id)), HttpStatus.CREATED);
     }
 
