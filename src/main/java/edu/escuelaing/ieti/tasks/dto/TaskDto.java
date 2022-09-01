@@ -1,8 +1,6 @@
 package edu.escuelaing.ieti.tasks.dto;
 
 import edu.escuelaing.ieti.tasks.enums.Status;
-import javafx.concurrent.Task;
-
 import java.util.Date;
 
 public class TaskDto {
