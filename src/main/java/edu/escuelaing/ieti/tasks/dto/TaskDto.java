@@ -12,12 +12,12 @@ public class TaskDto {
     private String description;
     private Status status;
     private String assignedTo;
-    private Date dueDate;
+    private String dueDate;
     private Date createdAt;
 
     public TaskDto(){}
 
-    public TaskDto(String name, String description, Status status, String assignedTo, Date dueDate){
+    public TaskDto(String name, String description, Status status, String assignedTo, String dueDate){
         this.name = name;
         this.description = description;
         this.status = status;
@@ -65,11 +65,11 @@ public class TaskDto {
         this.assignedTo = assignedTo;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 

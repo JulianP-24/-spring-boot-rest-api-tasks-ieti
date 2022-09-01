@@ -11,7 +11,7 @@ public class Task {
     private String description;
     private Status status;
     private String assignedTo;
-    private Date dueDate;
+    private String dueDate;
     private Date createdAt;
 
     public Task(){}
@@ -66,11 +66,11 @@ public class Task {
         this.assignedTo = assignedTo;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 
