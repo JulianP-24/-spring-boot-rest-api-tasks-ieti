@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-@Service
+
 public class TaskServiceHashMap implements TaskService {
 
     private final Map<String, Task> taskHashMap = new HashMap<>();

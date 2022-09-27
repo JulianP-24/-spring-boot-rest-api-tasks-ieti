@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@RequestMapping( "/v1/tasks" )
 public class TaskController {
 
     private final TaskService taskService;
